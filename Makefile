@@ -16,14 +16,6 @@ grepgc	=$(shell grep -nH --color getchar $(SRC_DIR)/*/*.c)
 
 #########################################
 SRC		=	$(addsuffix .c,				\
-			$(addprefix box/,			\
-			ft_box_del					\
-			ft_box_new					\
-			ft_box_show					\
-			ft_box_xlen					\
-			ft_box_ylen					\
-			ft_box_zlen					\
-			)							\
 			$(addprefix char/,			\
 			ft_isalnum					\
 	  		ft_isalpha					\
@@ -35,12 +27,6 @@ SRC		=	$(addsuffix .c,				\
 	  		ft_isupper					\
 	  		ft_tolower					\
 	  		ft_toupper					\
-			)							\
-			$(addprefix color/,			\
-			color_cool					\
-			color_palette_bwgr			\
-			color_palette_cbym			\
-			color_palette_format		\
 			)							\
 			$(addprefix conv/,			\
 			ft_atoi_base				\
@@ -55,9 +41,11 @@ SRC		=	$(addsuffix .c,				\
 			debug_aux					\
 			debug_coffee				\
 			debug_int					\
+			dbg_ar						\
 			)							\
-			$(addprefix hash/,			\
-			ft_hash_crc32				\
+			$(addprefix file/,			\
+			ft_filename					\
+			ft_is_extension				\
 			)							\
 			$(addprefix lst/,			\
 			ft_lstadd_back				\
@@ -116,8 +104,11 @@ SRC		=	$(addsuffix .c,				\
 			ft_stack_swap_top			\
 			)							\
 			$(addprefix str/,			\
+			ft_arfree					\
 			ft_split					\
 			ft_strchr					\
+			ft_strcmp					\
+			ft_strcpy					\
 	  		ft_strdup					\
 	  		ft_striteri					\
 	  		ft_strjoin					\
@@ -228,7 +219,6 @@ true:
 		@echo -n $(cm)$(n)"$(shell ar -tv $(NAME) | wc -l) scan ar objects\n"
 
 m:		a dream come true
-
 
 # # # #
 # SUBDIRS = foo bar baz

@@ -1,18 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_arfree.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 19:52:50 by sloquet           #+#    #+#             */
-/*   Updated: 2022/01/29 15:50:01 by sloquet          ###   ########.fr       */
+/*   Created: 2022/02/22 11:52:16 by sloquet           #+#    #+#             */
+/*   Updated: 2022/02/22 11:58:50 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hsl_char.h"
+#include "hsl_str.h"
 
-int	ft_islower(int c)
+/**
+ *  free char**
+ * 	0 on success
+ * 	-1 if array == NULL
+ */
+int	ft_arfree(char **array)
 {
-	return (c >= 'a' && c <= 'z');
+	int	i;
+
+	if (!array)
+		return (-1);
+	i = 0;
+	while (array[i])
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
+	return (0);
 }

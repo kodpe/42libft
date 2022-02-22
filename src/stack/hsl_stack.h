@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/06 12:19:27 by zsheep            #+#    #+#             */
-/*   Updated: 2022/02/06 12:19:27 by sloquet          ###   ########.fr       */
+/*   Created: 2022/02/05 07:42:38 by zsheep            #+#    #+#             */
+/*   Updated: 2022/02/05 07:42:38 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int		ft_stack_len(t_stack *s);
 /**
  *		ft_stack_median.c
  */
-int		ft_stack_mediandhuihih(int *median, t_stack *s, int len);
+int		ft_stack_median(int *median, t_stack *s, int len);
 
 /**
  *		ft_stack_minmax.c

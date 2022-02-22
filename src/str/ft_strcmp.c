@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 19:52:50 by sloquet           #+#    #+#             */
-/*   Updated: 2022/01/29 15:50:01 by sloquet          ###   ########.fr       */
+/*   Created: 2022/02/22 11:22:55 by sloquet           #+#    #+#             */
+/*   Updated: 2022/02/22 11:23:50 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hsl_char.h"
+#include "hsl_str.h"
 
-int	ft_islower(int c)
+int	ft_strcmp(char *s1, char *s2)
 {
-	return (c >= 'a' && c <= 'z');
+	int	i;
+
+	i = 0;
+	while (s1[i] || s2[i])
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (0);
 }

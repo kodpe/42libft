@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 19:52:50 by sloquet           #+#    #+#             */
-/*   Updated: 2022/01/29 15:50:01 by sloquet          ###   ########.fr       */
+/*   Created: 2022/02/22 11:24:47 by sloquet           #+#    #+#             */
+/*   Updated: 2022/02/22 11:25:09 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hsl_char.h"
+#include "hsl_str.h"
 
-int	ft_islower(int c)
+char	*ft_strcpy(char *dest, const char *src)
 {
-	return (c >= 'a' && c <= 'z');
+	int	i;
+
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = 0;
+	return (dest);
 }

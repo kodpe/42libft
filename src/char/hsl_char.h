@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/06 12:19:28 by zsheep            #+#    #+#             */
-/*   Updated: 2022/02/06 12:19:28 by sloquet          ###   ########.fr       */
+/*   Created: 2022/02/01 12:17:24 by zsheep            #+#    #+#             */
+/*   Updated: 2022/02/01 12:17:24 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
  *		ft_isalnum.c
  */
 int		ft_isalnum(int c);
+
+/**
+ *		ft_isalnum copy.c
+ */
 
 /**
  *		ft_isalpha.c

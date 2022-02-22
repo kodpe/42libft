@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   dbg_ar.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 19:52:50 by sloquet           #+#    #+#             */
-/*   Updated: 2022/01/29 15:50:01 by sloquet          ###   ########.fr       */
+/*   Created: 2022/02/22 11:55:18 by sloquet           #+#    #+#             */
+/*   Updated: 2022/02/22 11:55:32 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hsl_char.h"
+#include "hsl_debug.h"
 
-int	ft_islower(int c)
+void	dbg_ar(const char **array, const char *name)
 {
-	return (c >= 'a' && c <= 'z');
+	int	i;
+
+	if (!array)
+		return ;
+	i = 0;
+	while (array[i])
+	{
+		ft_printf("%s[%d]: %s\n", name, i, array[i]);
+		i++;
+	}
 }
