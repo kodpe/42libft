@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_newtab.c                                        :+:      :+:    :+:   */
+/*   ft_close_gnl.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/04 09:33:42 by sloquet           #+#    #+#             */
-/*   Updated: 2022/03/17 16:51:23 by sloquet          ###   ########.fr       */
+/*   Created: 2022/03/17 17:06:54 by sloquet           #+#    #+#             */
+/*   Updated: 2022/03/17 17:07:06 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hsl_tab.h"
+#include "hsl_str.h"
 
-int	*ft_newtab(const int size)
+void	ft_close_gnl(int fd)
 {
-	int	*tab;
-	int	i;
+	char	*tmp;
 
-	tab = (int *)malloc(sizeof(int) * size);
-	if (!tab)
-		return (NULL);
-	i = 0;
-	while (i < size)
+	while (1)
 	{
-		tab[i] = 0;
-		i++;
+		tmp = get_next_line(fd);
+		if (!tmp)
+			break ;
+		free(tmp);
 	}
-	return (tab);
 }

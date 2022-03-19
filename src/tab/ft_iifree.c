@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_newtab.c                                        :+:      :+:    :+:   */
+/*   ft_iifree.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/04 09:33:42 by sloquet           #+#    #+#             */
-/*   Updated: 2022/03/17 16:51:23 by sloquet          ###   ########.fr       */
+/*   Created: 2022/03/17 16:55:04 by sloquet           #+#    #+#             */
+/*   Updated: 2022/03/17 16:56:07 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "hsl_tab.h"
 
-int	*ft_newtab(const int size)
+void	ft_iifree(int **tab, const int ylen)
 {
-	int	*tab;
-	int	i;
+	int	y;
 
-	tab = (int *)malloc(sizeof(int) * size);
 	if (!tab)
-		return (NULL);
-	i = 0;
-	while (i < size)
+		return ;
+	y = 0;
+	while (y < ylen)
 	{
-		tab[i] = 0;
-		i++;
+		free(tab[y]);
+		y++;
 	}
-	return (tab);
+	free(tab);
+	tab = NULL;
 }

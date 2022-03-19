@@ -6,7 +6,7 @@
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 22:17:29 by kodpe             #+#    #+#             */
-/*   Updated: 2022/02/22 12:22:58 by sloquet          ###   ########.fr       */
+/*   Updated: 2022/03/19 05:50:32 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,20 @@
 # define LIBFT_H
 /**
  	Last update
-	Tue 22 Feb 2022 12:22:59 PM CET
+	Sat 19 Mar 2022 05:50 PM CET
 
-	new file:   src/debug/dbg_ar.c
+	edited		src/str/ft_strdup.c
+    edited		src/tab/ft_newtab.c
 
-	new file:   src/file/ft_filename.c
-	new file:   src/file/ft_is_extension.c
-
-	new file:   src/str/ft_arfree.c
-	new file:   src/str/ft_strcmp.c
-	new file:   src/str/ft_strcpy.c
-
-	modified:   src/str/ft_strdup.c
+	new file	src/file/ft_filelen.c
+    new file	src/file/ft_gnln.c
+    new file	src/maths/ft_distance_btw_values.c
+    new file	src/str/ft_arlen.c
+    new file	src/str/ft_close_gnl.c
+    new file	src/tab/ft_iifree.c
+	new file	src/tab/ft_iishow.c
+    new file	src/tab/ft_new_iitab.c
+    new file	src/tab/ft_set_iitab.c
 */
 
 /** # include "src/box/hsl_box.h" */

@@ -6,7 +6,7 @@
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 12:01:42 by zsheep            #+#    #+#             */
-/*   Updated: 2022/02/22 12:01:42 by sloquet          ###   ########.fr       */
+/*   Updated: 2022/03/17 17:09:04 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,16 @@
  *		ft_arfree.c
  */
 int		ft_arfree(char **array);
+
+/**
+ *		ft_arlen.c
+ */
+int		ft_arlen(const char **array);
+
+/**
+ * 		ft_close_gnl.c
+ */
+void	ft_close_gnl(int fd);
 
 /**
  *		ft_split.c

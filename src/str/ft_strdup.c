@@ -6,7 +6,7 @@
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:04:09 by sloquet           #+#    #+#             */
-/*   Updated: 2022/02/22 11:39:07 by sloquet          ###   ########.fr       */
+/*   Updated: 2022/03/19 04:30:14 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ static int	ft_test(const char *string)
 	std_str = strdup(string);
 	ft_str = ft_strdup(string);
 	result = strcmp(std_str, ft_str);
-	printf("in :%s\n", string);
-	printf("std_str :%s\n", std_str);
-	printf("ft_str :%s\n", ft_str);
+	ft_printf("in :%s\n", string);
+	ft_printf("std_str :%s\n", std_str);
+	ft_printf("ft_str :%s\n", ft_str);
 	free(std_str);
 	free(ft_str);
 	return (result);
@@ -56,10 +56,10 @@ int	main(void)
 	if (ft_test("Unbreakable")
 		|| ft_test("") || ft_test("a"))
 	{
-		printf("KO: ft_strdup");
+		ft_printf("KO: ft_strdup");
 		return (1);
 	}
-	printf("OK: ft_strdup");
+	ft_printf("OK: ft_strdup");
 	// char *test= "0wf9rer908098";
 	char *test = NULL; // ! standard strdup() segfault on NULL
 	ft_test(test);

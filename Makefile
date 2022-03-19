@@ -44,7 +44,9 @@ SRC		=	$(addsuffix .c,				\
 			dbg_ar						\
 			)							\
 			$(addprefix file/,			\
+			ft_filelen					\
 			ft_filename					\
+			ft_gnln						\
 			ft_is_extension				\
 			)							\
 			$(addprefix lst/,			\
@@ -60,6 +62,7 @@ SRC		=	$(addsuffix .c,				\
 			)							\
 			$(addprefix maths/,			\
 			ft_abs						\
+			ft_distance_btw_values		\
 			ft_factorial				\
 			ft_fibonacci				\
 			ft_isprime					\
@@ -105,6 +108,7 @@ SRC		=	$(addsuffix .c,				\
 			)							\
 			$(addprefix str/,			\
 			ft_arfree					\
+			ft_arlen					\
 			ft_split					\
 			ft_strchr					\
 			ft_strcmp					\
@@ -124,6 +128,7 @@ SRC		=	$(addsuffix .c,				\
 	  		ft_strtrim					\
 	  		ft_substr					\
 			get_next_line				\
+			ft_close_gnl				\
 			)							\
 			$(addprefix tab/,			\
 			ft_newtab					\
@@ -134,6 +139,10 @@ SRC		=	$(addsuffix .c,				\
 			ft_tab_firstquart			\
 			ft_tab_minmax				\
 			ft_tabshow					\
+			ft_new_iitab				\
+			ft_set_iitab				\
+			ft_iishow					\
+			ft_iifree					\
 			)							\
 			$(addprefix test/,			\
 			ft_test						\

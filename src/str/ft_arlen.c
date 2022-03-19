@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_newtab.c                                        :+:      :+:    :+:   */
+/*   ft_arlen.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/04 09:33:42 by sloquet           #+#    #+#             */
-/*   Updated: 2022/03/17 16:51:23 by sloquet          ###   ########.fr       */
+/*   Created: 2022/03/17 17:03:18 by sloquet           #+#    #+#             */
+/*   Updated: 2022/03/17 17:04:03 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hsl_tab.h"
+#include "hsl_str.h"
 
-int	*ft_newtab(const int size)
+int	ft_arlen(const char **array)
 {
-	int	*tab;
 	int	i;
 
-	tab = (int *)malloc(sizeof(int) * size);
-	if (!tab)
-		return (NULL);
 	i = 0;
-	while (i < size)
-	{
-		tab[i] = 0;
+	while (array[i] && array[i][0] != '\n')
 		i++;
-	}
-	return (tab);
+	return (i);
 }

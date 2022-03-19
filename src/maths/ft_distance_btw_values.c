@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_newtab.c                                        :+:      :+:    :+:   */
+/*   ft_distance_btw_values.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/04 09:33:42 by sloquet           #+#    #+#             */
-/*   Updated: 2022/03/17 16:51:23 by sloquet          ###   ########.fr       */
+/*   Created: 2022/03/18 22:23:51 by sloquet           #+#    #+#             */
+/*   Updated: 2022/03/18 22:36:12 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hsl_tab.h"
+#include "hsl_maths.h"
 
-int	*ft_newtab(const int size)
+int	ft_distance_btw_values(const int a, const int b)
 {
-	int	*tab;
-	int	i;
+	int	min;
+	int	max;
 
-	tab = (int *)malloc(sizeof(int) * size);
-	if (!tab)
-		return (NULL);
-	i = 0;
-	while (i < size)
+	if (a == b)
+		return (0);
+	if (a < b)
 	{
-		tab[i] = 0;
-		i++;
+		min = a;
+		max = b;
 	}
-	return (tab);
+	if (a > b)
+	{
+		max = a;
+		min = b;
+	}
+	if (min >= 0)
+		return (max - min);
+	if (max < 0)
+		return (ft_abs(min - max));
+	return (ft_abs(min) + max);
 }

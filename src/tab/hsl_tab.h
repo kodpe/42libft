@@ -6,7 +6,7 @@
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 11:30:21 by zsheep            #+#    #+#             */
-/*   Updated: 2022/02/05 11:30:21 by sloquet          ###   ########.fr       */
+/*   Updated: 2022/03/18 22:21:46 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,29 @@
 # include "../sort/hsl_sort.h"
 
 /**
+ *		ft_iifree.c
+ */
+void	ft_iifree(int **tab, const int ylen);
+
+/**
+ *		ft_iishow.c
+ */
+void	ft_iishow(int **tab, const int xlen, const int ylen);
+
+/**
+ *		ft_new_iitab.c
+ */
+int		**ft_new_iitab(const int xlen, const int ylen, const int val);
+
+/**
  *		ft_newtab.c
  */
-int		*ft_newtab(int size);
+int		*ft_newtab(const int size);
+
+/**
+ *		ft_set_iitab.c
+ */
+void	ft_set_iitab(int **tab, const int xlen, const int ylen, const int val);
 
 /**
  *		ft_tab_are_distinct.c

@@ -6,7 +6,7 @@
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 12:18:38 by zsheep            #+#    #+#             */
-/*   Updated: 2022/02/01 12:18:38 by sloquet          ###   ########.fr       */
+/*   Updated: 2022/03/18 22:35:10 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@
  */
 long	ft_abs(long n);
 
+/**
+ * 		ft_distance_btw_values.c
+ */
+int		ft_distance_btw_values(const int a, const int b);
 /**
  *		ft_factorial.c
  */
