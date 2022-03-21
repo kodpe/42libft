@@ -1,66 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hsl_char.h                                         :+:      :+:    :+:   */
+/*   hsl_box.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 12:17:24 by zsheep            #+#    #+#             */
-/*   Updated: 2022/03/21 15:16:39 by sloquet          ###   ########.fr       */
+/*   Updated: 2022/02/01 12:17:24 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HSL_CHAR_H
-# define HSL_CHAR_H
+#ifndef HSL_BOX_H
+# define HSL_BOX_H
+
+# include <stdlib.h>
+# include "../write/hsl_write.h"
 
 /**
- *		ft_isalnum.c
+ *		ft_box_del.c
  */
-int		ft_isalnum(int c);
+void	ft_box_del(char ***box);
 
 /**
- *		ft_isalpha.c
+ *		ft_box_new.c
  */
-int		ft_isalpha(int c);
+char	***ft_box_new(const int x, const int y, const int z);
 
 /**
- *		ft_isascii.c
+ *		ft_box_show.c
  */
-int		ft_isascii(int c);
+void	ft_box_show(char ***box);
 
 /**
- *		ft_isdigit.c
+ *		ft_box_xlen.c
  */
-int		ft_isdigit(int c);
+size_t	ft_box_xlen(char ***box);
 
 /**
- *		ft_islower.c
+ *		ft_box_ylen.c
  */
-int		ft_islower(int c);
+size_t	ft_box_ylen(char ***box);
 
 /**
- *		ft_isprint.c
+ *		ft_box_zlen.c
  */
-int		ft_isprint(int c);
+size_t	ft_box_zlen(char ***box);
 
-/**
- *		ft_issign.c
- */
-int		ft_issign(int c);
-
-/**
- *		ft_isupper.c
- */
-int		ft_isupper(int c);
-
-/**
- *		ft_tolower.c
- */
-int		ft_tolower(int c);
-
-/**
- *		ft_toupper.c
- */
-int		ft_toupper(int c);
-
-#endif /* HSL_CHAR_H */
+#endif /* HSL_BOX_H */

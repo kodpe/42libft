@@ -6,7 +6,7 @@
 /*   By: sloquet <sloquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:42:20 by sloquet           #+#    #+#             */
-/*   Updated: 2022/01/29 13:50:18 by sloquet          ###   ########.fr       */
+/*   Updated: 2022/03/21 13:28:26 by sloquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,20 @@
  * character ’c’ as a delimiter. The array must be
  * ended by a NULL pointer.
  */
+
+static int	ft_freeall(char **split, int wd)
+{
+	int	i;
+
+	while (i < wd)
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
+	split = NULL;
+	return (0);
+}
 
 static char	*ft_strxcpy(char *wd, char const *s, int start, int wd_len)
 {
@@ -73,7 +87,7 @@ static int	ft_get_words(char **split, const char *s, char c, int wd_count)
 		}
 		split[wd] = (char *)malloc(sizeof(char) * (wd_len + 1));
 		if (!split[wd])
-			return (0);
+			return (ft_freeall(split, wd));
 		ft_strxcpy(split[wd], s, i - wd_len, wd_len);
 		wd++;
 	}

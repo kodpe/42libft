@@ -16,6 +16,14 @@ grepgc	=$(shell grep -nH --color getchar $(SRC_DIR)/*/*.c)
 
 #########################################
 SRC		=	$(addsuffix .c,				\
+			$(addprefix box/,			\
+			ft_box_del					\
+			ft_box_new					\
+			ft_box_show					\
+			ft_box_xlen					\
+			ft_box_ylen					\
+			ft_box_zlen					\
+			)							\
 			$(addprefix char/,			\
 			ft_isalnum					\
 	  		ft_isalpha					\
@@ -27,6 +35,12 @@ SRC		=	$(addsuffix .c,				\
 	  		ft_isupper					\
 	  		ft_tolower					\
 	  		ft_toupper					\
+			)							\
+			$(addprefix color/,			\
+			color_cool					\
+			color_palette_bwgr			\
+			color_palette_cbym			\
+			color_palette_format		\
 			)							\
 			$(addprefix conv/,			\
 			ft_atoi_base				\
@@ -49,16 +63,19 @@ SRC		=	$(addsuffix .c,				\
 			ft_gnln						\
 			ft_is_extension				\
 			)							\
+			$(addprefix hash/,			\
+			ft_hash_crc32				\
+			)							\
 			$(addprefix lst/,			\
 			ft_lstadd_back				\
 			ft_lstadd_front				\
-			ft_lstclear					\
-			ft_lstdelone				\
-			ft_lstiter					\
 			ft_lstlast					\
 			ft_lstmap					\
 			ft_lstnew					\
 			ft_lstsize					\
+			ft_lstclear					\
+			ft_lstdelone				\
+			ft_lstiter					\
 			)							\
 			$(addprefix maths/,			\
 			ft_abs						\
