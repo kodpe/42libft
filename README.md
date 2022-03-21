@@ -1,7 +1,9 @@
-**42school libft**
+**my 42school libft**
 
-Last update Mon 21 Mar 2022 15:30 PM CET
+
 ```
+Last update Mon 21 Mar 2022 15:30 PM CET
+
 edited		src/str/ft_strdup.c
 edited		src/str/ft_split.c
 edited		src/tab/ft_newtab.c
