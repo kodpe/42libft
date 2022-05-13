@@ -1,4 +1,4 @@
-**my 42school libft**
+**my actual 42school libft**
 
 
 ```
