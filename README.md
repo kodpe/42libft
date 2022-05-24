@@ -90,7 +90,7 @@ maths
 +┃ ┗ ft_max
 +┣ ft_nextprime
 +┣ ft_power
-+┗ ft_sqrt
+!┗ ft_sqrt
 
 mem
 *┣ ft_bzero
